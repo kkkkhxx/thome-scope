@@ -1,0 +1,174 @@
+<!-- ✅ Responsive Navbar -->
+<nav class="navbar">
+    <div class="navbar-inner">
+        <div class="navbar-logo">
+            <a href="index.html"><img src="assets/Images/logo.png" alt="logo-thome" /></a>
+        </div>
+
+        <ul class="navbar-menu" id="navbarMenu">
+            <li><a href="index.html">หน้าหลัก</a></li>
+
+            <li class="dropdown">
+                <a href="#" onclick="toggleDropdown(event)">สโคปในการตรวจสอบ</a>
+                <ul class="dropdown-menu">
+                    <li><a href="electrical.html">งานระบบไฟฟ้า</a></li>
+                    <li><a href="plumbing.html">งานสุขาภิบาล</a></li>
+                    <li><a href="roof.html">งานหลังคา</a></li>
+                    <li><a href="leakage.html">งานรั่วซึม</a></li>
+                    <li><a href="architecture.html">งานสถาปัตยกรรม</a></li>
+                    <li><a href="uncheck.html">รายการที่ไม่ได้ตรวจ</a></li>
+                </ul>
+            </li>
+
+
+            <li><a href="limit.html">ข้อจำกัดในการตรวจสอบ</a></li>
+            <li><a href="video.html">วิธีการตรวจสอบ</a></li>
+
+            <!-- <li class="dropdown">
+                <a href="#" onclick="toggleDropdown(event)">วิธีการตรวจสอบ</a>
+                <ul class="dropdown-menu">
+                    <li><a href="#">งานระบบไฟฟ้า</a></li>
+                    <li><a href="#">งานสุขาภิบาล</a></li>
+                    <li><a href="#">งานรั่วซึม</a></li>
+                </ul>
+            </li> -->
+
+            <li><a href="FAQ.html">คำถามที่พบบ่อย</a></li>
+        </ul>
+    </div>
+
+    <button class="menu-toggle" onclick="toggleMenu()">☰</button>
+</nav>
+
+<!-- ✅ CSS -->
+<style>
+    * {
+        box-sizing: border-box;
+        margin: 0;
+        padding: 0;
+    }
+
+    .navbar {
+        background: #f8f9fa;
+        padding: 10px 20px;
+        border-bottom: 1px solid #ccc;
+        position: relative;
+        box-shadow: 0 7px 7px 0 rgba(0, 0, 0, 0.096);
+    }
+
+    .navbar-inner {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        gap: 40px;
+    }
+
+    .navbar-logo img {
+        height: 50px;
+    }
+
+    .menu-toggle {
+        display: none;
+        font-size: 26px;
+        background: none;
+        border: none;
+        cursor: pointer;
+        padding: 10px;
+        position: absolute;
+        top: 10px;
+        right: 20px;
+    }
+
+    .navbar-menu {
+        display: flex;
+        gap: 40px;
+        list-style: none;
+    }
+
+    .navbar-menu li {
+        position: relative;
+        list-style: none;
+    }
+
+    .navbar-menu li a {
+        text-decoration: none;
+        color: #333;
+        font-weight: 500;
+        display: block;
+        padding: 10px 0;
+    }
+
+    .navbar-menu li a:hover {
+        color: #1992d4;
+        font-weight: bold;
+    }
+
+    .dropdown-menu {
+        display: none;
+        position: absolute;
+        background: white;
+        top: 100%;
+        left: 0;
+        min-width: 180px;
+        box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+        padding: 10px 0;
+        z-index: 1000;
+    }
+
+    .dropdown-menu li {
+        padding: 5px 20px;
+    }
+
+    .dropdown:hover .dropdown-menu {
+        display: block;
+    }
+
+    /* 📱 Mobile */
+    @media (max-width: 1024px) {
+
+        .navbar-logo img {
+            height: 30px;
+            margin: 20px 0 10px 0;
+        }
+
+        .navbar-inner {
+            flex-direction: column;
+            align-items: flex-start;
+            gap: 10px;
+        }
+
+        .menu-toggle {
+            display: block;
+        }
+
+        .navbar-menu {
+            flex-direction: column;
+            gap: 0;
+            width: 100%;
+            display: none;
+        }
+
+        .navbar-menu.show {
+            display: flex;
+        }
+
+        .dropdown:hover .dropdown-menu {
+            display: none;
+        }
+
+        .dropdown.open .dropdown-menu {
+            display: block;
+            position: relative;
+            box-shadow: none;
+        }
+
+        .dropdown>a::after {
+            content: " ▾";
+        }
+
+        .dropdown-menu {
+            position: relative;
+            box-shadow: none;
+        }
+    }
+</style>
