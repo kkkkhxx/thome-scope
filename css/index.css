@@ -1,6 +1,6 @@
 @font-face {
     font-family: 'FC Sound';
-    src: url('../assets/font/FCSound-Regular.ttf') format('truetype');
+    src: url('assets/font/FCSound-Regular.ttf') format('truetype');
 }
 
 * {
@@ -13,7 +13,7 @@
 /*---------------------------- header ---------------------------------*/
 header {
     background-image: linear-gradient(rgba(5, 87, 175, 0.938), rgba(0, 92, 190, 0.068)),
-        url('/assets/Images/header.jpg');
+        url('assets/Images/header.jpg');
     background-position: center;
     background-repeat: no-repeat;
     background-size: cover;
@@ -90,32 +90,32 @@ main {
 
 #card1 {
     background-image: linear-gradient(rgba(0, 53, 110, 0.486)),
-        url('/assets/Images/eletrical.JPG');
+        url('assets/Images/eletrical.JPG');
 }
 
 #card2 {
     background-image: linear-gradient(rgba(0, 53, 110, 0.486)),
-        url('/assets/Images/plumbing.jpg');
+        url('assets/Images/plumbing.jpg');
 }
 
 #card3 {
     background-image: linear-gradient(rgba(0, 53, 110, 0.486)),
-        url('/assets/Images/roof.jpg');
+        url('assets/Images/roof.jpg');
 }
 
 #card4 {
     background-image: linear-gradient(rgba(0, 53, 110, 0.486)),
-        url('/assets/Images/leakage.jpg');
+        url('assets/Images/leakage.jpg');
 }
 
 #card5 {
     background-image: linear-gradient(rgba(0, 53, 110, 0.486)),
-        url('/assets/Images/architecture.JPG');
+        url('assets/Images/architecture.JPG');
 }
 
 #card6 {
     background-image: linear-gradient(rgba(0, 53, 110, 0.486)),
-        url('/assets/Images/uncheck.png');
+        url('assets/Images/uncheck.png');
 }
 
 .all_card {
