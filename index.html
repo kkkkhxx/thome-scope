@@ -4,7 +4,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=, initial-scale=1.0">
-    <link rel="stylesheet" href="/css/index.css">
+    <link rel="stylesheet" href="css/index.css">
     <title>T.Home Scope</title>
 </head>
 
@@ -292,11 +292,11 @@
 
     <button onclick="scrollToTop()" id="scrollTopBtn" title="กลับด้านบน">↑</button>
 
-    <script src="/func.js"></script>
+    <script src="func.js"></script>
 </body>
 
 <script>
-    fetch('/html/navbar.html')
+    fetch('html/navbar.html')
         .then(res => res.text())
         .then(html => {
             document.getElementById('navbar-placeholder').innerHTML = html;
